@@ -59,6 +59,10 @@ jobs:
           aws eks update-kubeconfig \
             --region $AWS_REGION \
             --name $EKS_CLUSTER_NAME
+      - name: Verify EKS access
+        run: |
+          kubectl get nodes
+          kubectl get namespaces
 
       - name: Replace Image Tag
         run: |
