@@ -6,7 +6,7 @@ metadata:
 
 spec:
   selector:
-    app: eks-demo
+    app: flask-app
 
   ports:
   - port: 80
